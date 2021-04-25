@@ -1,0 +1,13 @@
+{
+	"title"		:	"Fat Kid",
+	"type"		:	"gamemode",
+	"tags"		:	[ "fun", "realism" ],
+	"ignore"	:
+	[
+		".git/*",
+		"*.vmf",
+		"*.fgd",
+		"README.md",
+		"LICENSE"
+	]
+}

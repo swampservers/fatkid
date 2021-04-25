@@ -1,0 +1,9 @@
+"duckhunt"
+{
+	"base"		"infection"
+	"title"		"Duck Hunt"
+	"maps"		"^duckhunt_"
+	"category"	"pvp"
+	"menusystem"	"1"
+	"workshopid"	"2467219933"
+}

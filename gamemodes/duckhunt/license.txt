@@ -1,0 +1,31 @@
+FATKID LICENSE VERSION 1
+
+By downloading or using The Software (as defined below), you agree to this contract. This agreement may be negotiable on an individual basis; contact swampservers@gmail.com for more information.
+
+Preamble:
+This license is intended to protect the integrity of the Fat Kid gamemode by preventing server operators from selling unfair advantages to players. It also creates an agreement that any new content (e.g. new maps) created for the gamemode will be usable by all. This license is not intended to infringe on any other party's legal rights.
+
+0. Definitions:
+- "The Software" refers to any and all files hosted on https://github.com/swampservers/fatkid or its mirror at https://steamcommunity.com/sharedfiles/filedetails/?id=2467219933. This includes the "Fat Kid" gamemode software for Garry's Mod.
+- A "Fat Kid Server" means a Garry's Mod game server which runs The Software, or any computer system which distributes any part of The Software to users over a network.
+- "Players" means users which connect to or play on a "Fat Kid Server" over a network.
+- "In-Game Rewards" means virtual items, weapons, player customization, buffs/stat changes, ranks/permissions, or any other privilege which is unevenly granted to Players which may affect the game experience for any Player.
+- "Extensions" means any content which is run on or distributed by a Fat Kid Server owned by or with permission from the content's copyright holder, or was created with the intent of being used on a Fat Kid Server. This includes, but is not limited to, new maps, new weapons/power-ups, and changes to the gamemode software. Note that any addon you own which you install on a Fat Kid Server is considered an Extension and is subject to the license agreement below unless you are given an exception (contact swampservers@gmail.com to request).
+
+1. Server restrictions:
+You may create and manage a Fat Kid Server, SUBJECT TO THE FOLLOWING RESTRICTION: You may not monetize your Fat Kid Server! This includes, but is not limited to, selling In-Game Rewards, accepting "donations" in exchange for In-Game Rewards, or having players engage in any activity in exchange for In-Game Rewards from which you profit (e.g. watching ads). You may not in any way attempt to collect money from Players. You also may not provide Players with any sort of unequal access In-Game Rewards which is in any way connected to their status on another game server or any other system. YOU ARE NOT ALLOWED TO CREATE A SCENARIO WHERE PLAYERS ON YOUR FAT KID SERVER ARE ENTICED TO GIVE YOU MONEY IN EXCHANGE FOR ANY IN-GAME REWARD ON YOUR FAT KID SERVER!
+
+Exception/Limitations to section 1: 
+- You are permitted to show a video advertisement to Players upon their initial connection to the server or between rounds using a service such as https://gameserverads.com/ or an equivalent. The ads must be shown to all Players equally to the extent that ad availability permits. IF YOU HOST OTHER GAME SERVERS WHICH DO NOT RUN OR DISTRIBUTE ANY PART OF THE SOFTWARE, NONE OF SECTION 1 SHALL INTERFERE WITH YOUR RIGHTS TO RUN AND MONETIZE THOSE OTHER SERVERS.
+
+2. Extension license agreement:
+You may create Extensions for The Software, SUBJECT TO THE FOLLOWING AGREEMENT: You agree that Swamp Servers has a PERMANENT, IRREVOCABLE, WORLDWIDE, TRANSFERABLE LICENSE to include your Extension in The Software subject to no additional restrictions, and anyone who uses The Software is granted a PERMANENT, IRREVOCABLE, WORLDWIDE, TRANSFERABLE LICENSE to use your Extension on their own Fat Kid Server and distribute it to their Players subject to no additional restrictions. You are also required to make any Lua source code for your Extension publicly viewable, if applicable. A good way to do this is by uploading it to a "fork" of our GitHub repository. Note that you still own the copyright to your Extension; but this allows us and all users of The Software to use your Extension.
+
+3. Modification restrictions:
+You are not permitted to modify or remove any line in any file which contains a link to https://github.com/swampservers/fatkid or https://github.com/swampservers/fatkid/blob/master/LICENSE from any copy of The Software, nor are you permitted to modify or remove any file containing this license, or run or distribute any copy of The Software with any modification/removal described in this section.
+
+4. Severability:
+If any part of this agreement is found to be unenforceable, all other parts remain enforced.
+
+5. Amendability:
+Swamp Servers retains the right to amend this license agreement and revoke previous versions of it. Any time you download the latest version of The Software from https://github.com/swampservers/fatkid or its mirror at https://steamcommunity.com/sharedfiles/filedetails/?id=2467219933, you agree to the latest version of the license included with it. If you are informed of an amendment to the license, you agree that you will either agree to the updated license or cease use and distribution of The Software and delete any copies of it. Any agreement to an updated license retroactively applies to all versions of The Software which you have a copy of (including versions with Extensions).
