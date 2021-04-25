@@ -1,0 +1,9 @@
+"fatkid"
+{
+	"base"		"infection"
+	"title"		"Fat Kid"
+	"maps"		"^fatkid_"
+	"category"	"pvp"
+	"menusystem"	"1"
+	"workshopid"	"2467219933"
+}
