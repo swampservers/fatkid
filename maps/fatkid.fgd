@@ -1,0 +1,19 @@
+@include "base.fgd"
+@include "halflife2.fgd"
+@include "garrysmod.fgd"
+
+@PointClass base(Angles) studio("models/player/monk.mdl") = info_az_start : "Fat Kid spawn position (uses info_zombie_start if none exists)"
+[
+]
+
+@PointClass base(Angles) studio("models/player/skeleton.mdl") = info_zombie_start : "Skeleton spawn position (uses info_player_start if none exists)"
+[
+]
+
+@SolidClass base(Targetname) = func_skeletonpass : "A brush that only skeletons can walk though. Use the trigger texture. Create one of these entities for each brush. Old version."
+[
+]
+
+@SolidClass base(Targetname) = func_skeletongate : "A brush that only skeletons can walk though. Use the trigger texture. New version."
+[
+]

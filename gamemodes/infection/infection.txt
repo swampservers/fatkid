@@ -1,0 +1,9 @@
+"infection"
+{
+	"base"		"base"
+	"title"		"Infection"
+	"maps"		"^infect_|^zombie_|^tank_"
+	"category"	"pvp"
+	"menusystem"	"1"
+	"workshopid"	"2467219933"
+}
