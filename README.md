@@ -18,6 +18,8 @@ This repo actually contains 3 gamemodes - *Fat Kid*, *Duck Hunt*, and *Infection
 
 VMFs are included, please use them for examples. There is also an .fgd. All in [maps/](https://github.com/swampservers/fatkid/tree/master/maps).
 
+IF YOU WANT TO SUBMIT A NEW MAP, YOU MUST ALSO WRITE A BACKSTORY! See the [gymnasium](https://github.com/swampservers/fatkid/blob/master/gamemodes/fatkid/gamemode/maps/gymnasium/sh_init.lua) backstory for an example. The backstory should be HTML and will be shown to players when they initially join the server. It should be placed in `gamemodes/fatkid/gamemode/maps/(name of map not including fatkid_ or any number)/sh_init.lua` similarly to the current maps.
+
 - To create barricades: Use frozen prop_physics or func_breakable. Name them "barricade_X" where X is a number. All entities with the same barricade name will share a health bar (which is tracked by the gamemode).
 - To make skeleton-only tunnels: Make a trigger brush and tie it to "func_skeletonpass". Only skeletons can walk through it. Make a different entity for each brush.
 - Spawnpoints: info_player_start for humans, info_zombie_start for skeletons (if none they use human spawns), info_az_start for fat kid (if none he uses skeleton spawns or human spawns)
