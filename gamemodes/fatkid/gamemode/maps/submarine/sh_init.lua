@@ -4,10 +4,11 @@
 
 FATKID_BACKSTORY = [[
 <p>
-It was just an ordinary field trip in a nuclear submarine.
-Gregory, the class fat kid, was being bullied for his lacking mental capacity.
-But then, after being hit with a particularly heavy aluminium pan, something inside his brain changed.
-Or perhaps it was just hunger, as his fat ass hadn't eaten in over three hours.
-Either way, he started eating his fellow classmates in a murderous rampage of gluttony...
+It was just a local field trip in the nuclear submarine.
+Gregory, the class fat kid, was being bullied for shoving My Little Pony figurines up his nose.
+But then, after pushing a figurine a little too far up his nose,
+Or it was his fatass not having eaten in an hour.
+Either way, his autistic mind didn't handle too well, and he started eating...
+Can you escape his rampage?
 </p>
 ]]
