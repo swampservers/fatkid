@@ -596,13 +596,17 @@ function GM:EntityTakeDamage(target, dmg)
     if target:IsPlayer() then
         dmg:ScaleDamage(self:SelectPlayerConfig(target).TakeDamageScale)
 
-        if target:Team()==TEAM_HUMAN then
-
+        if target:Team() == TEAM_HUMAN then
             --todo do this smarter
             local lms = true
-            for i,v in ipairs(player.GetAll()) do
-                if v:Team()==TEAM_HUMAN and v~=target then lms = false break end
+
+            for i, v in ipairs(player.GetAll()) do
+                if v:Team() == TEAM_HUMAN and v ~= target then
+                    lms = false
+                    break
+                end
             end
+
             if lms then
                 dmg:ScaleDamage(GAMEMODE.LastManStandingDamageScale)
             end
