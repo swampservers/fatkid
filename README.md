@@ -1,6 +1,6 @@
 ![banner](http://swampservers.net/infection/fatkidbanner.png)
 
-*Fat Kid* is a Garry's Mod remake of the classic Halo 3 custom game with the same name.
+*Fat Kid* is a Garry's Mod remake of the classic Halo 3 custom game with the same name. TEST
 
 The game consists of rounds in which one player spawns as the "Fat Kid", a slow moving character with a massive amount of health, and his goal is to eliminate the other players before the round ends. The other players ("skinny kids") must flee through a narrow map and break down barricades to avoid being cornered and eaten by the Fat Kid. If the Fat Kid eats a player, that player turns into a "skeleton", which is a minion of the Fat Kid. Skeletons are fast-moving but have very low health, and their goal is to help the Fat Kid eliminate the skinny kids. The round has a time limit, and if any skinny kid survives until the end, the Fat Kid loses.
 
