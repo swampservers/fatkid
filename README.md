@@ -32,6 +32,8 @@ IF YOU WANT TO SUBMIT A NEW MAP, YOU MUST ALSO WRITE A BACKSTORY! See the [gymna
 
 Programmer and official server manager: [swamponions](https://steamcommunity.com/id/swamponions/)
 
+**NEW** fatkid_bunker: [Lozhenge](https://steamcommunity.com/profiles/76561198078133569)
+
 **NEW** fatkid_swimmingpool: [PYROTEKNIK](https://steamcommunity.com/id/pyroteknik/)
 
 fatkid_gymnasium: [swamponions](https://steamcommunity.com/id/swamponions/)
