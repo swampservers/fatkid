@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8538"
-	"mapversion" "888"
+	"mapversion" "889"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -26,7 +26,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "888"
+	"mapversion" "889"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -29362,7 +29362,7 @@ world
 		side
 		{
 			"id" "11091"
-			"plane" "(1120 2184 -384) (1120 2176 -384) (1056 2176 -384)"
+			"plane" "(1056 2184 -384) (1056 2192 -384) (1120 2192 -384)"
 			"material" "TOOLS/TOOLSNODRAW"
 			"uaxis" "[1 0 0 0] 0.25"
 			"vaxis" "[0 -1 0 0] 0.25"
@@ -29373,7 +29373,7 @@ world
 		side
 		{
 			"id" "11090"
-			"plane" "(1056 2184 -448) (1056 2176 -448) (1120 2176 -448)"
+			"plane" "(1056 2192 -448) (1056 2184 -448) (1120 2184 -448)"
 			"material" "TOOLS/TOOLSNODRAW"
 			"uaxis" "[1 0 0 0] 0.25"
 			"vaxis" "[0 -1 0 0] 0.25"
@@ -29384,7 +29384,7 @@ world
 		side
 		{
 			"id" "11089"
-			"plane" "(1056 2176 -448) (1056 2184 -448) (1056 2184 -384)"
+			"plane" "(1056 2184 -448) (1056 2192 -448) (1056 2192 -384)"
 			"material" "TOOLS/TOOLSNODRAW"
 			"uaxis" "[0 1 0 0] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
@@ -29395,7 +29395,7 @@ world
 		side
 		{
 			"id" "11088"
-			"plane" "(1120 2184 -448) (1120 2176 -448) (1120 2176 -384)"
+			"plane" "(1120 2192 -448) (1120 2184 -448) (1120 2184 -384)"
 			"material" "TOOLS/TOOLSNODRAW"
 			"uaxis" "[0 1 0 0] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
@@ -29406,7 +29406,7 @@ world
 		side
 		{
 			"id" "11087"
-			"plane" "(1056 2184 -448) (1120 2184 -448) (1120 2184 -384)"
+			"plane" "(1056 2192 -448) (1120 2192 -448) (1120 2192 -384)"
 			"material" "TOOLS/TOOLSNODRAW"
 			"uaxis" "[1 0 0 0] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
@@ -29417,7 +29417,7 @@ world
 		side
 		{
 			"id" "11086"
-			"plane" "(1120 2176 -448) (1056 2176 -448) (1056 2176 -384)"
+			"plane" "(1120 2184 -448) (1056 2184 -448) (1056 2184 -384)"
 			"material" "METAL/METALGRATE013A"
 			"uaxis" "[1 0 0 -32] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
@@ -29438,7 +29438,7 @@ world
 		side
 		{
 			"id" "11097"
-			"plane" "(1120 2240 -384) (1120 2232 -384) (1056 2232 -384)"
+			"plane" "(1056 2240 -384) (1056 2248 -384) (1120 2248 -384)"
 			"material" "METAL/METALVENT012A"
 			"uaxis" "[1 0 0 128] 0.25"
 			"vaxis" "[0 -1 0 -64] 0.25"
@@ -29449,7 +29449,7 @@ world
 		side
 		{
 			"id" "11096"
-			"plane" "(1056 2240 -448) (1056 2232 -448) (1120 2232 -448)"
+			"plane" "(1056 2248 -448) (1056 2240 -448) (1120 2240 -448)"
 			"material" "METAL/METALVENT012A"
 			"uaxis" "[1 0 0 128] 0.25"
 			"vaxis" "[0 -1 0 -64] 0.25"
@@ -29460,7 +29460,7 @@ world
 		side
 		{
 			"id" "11095"
-			"plane" "(1056 2232 -448) (1056 2240 -448) (1056 2240 -384)"
+			"plane" "(1056 2240 -448) (1056 2248 -448) (1056 2248 -384)"
 			"material" "METAL/METALVENT012A"
 			"uaxis" "[0 1 0 128] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
@@ -29471,7 +29471,7 @@ world
 		side
 		{
 			"id" "11094"
-			"plane" "(1120 2240 -448) (1120 2232 -448) (1120 2232 -384)"
+			"plane" "(1120 2248 -448) (1120 2240 -448) (1120 2240 -384)"
 			"material" "METAL/METALVENT012A"
 			"uaxis" "[0 1 0 128] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
@@ -29482,7 +29482,7 @@ world
 		side
 		{
 			"id" "11093"
-			"plane" "(1056 2240 -448) (1120 2240 -448) (1120 2240 -384)"
+			"plane" "(1056 2248 -448) (1120 2248 -448) (1120 2248 -384)"
 			"material" "METAL/METALVENT012A"
 			"uaxis" "[1 0 0 128] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
@@ -29493,7 +29493,7 @@ world
 		side
 		{
 			"id" "11092"
-			"plane" "(1120 2232 -448) (1056 2232 -448) (1056 2232 -384)"
+			"plane" "(1120 2240 -448) (1056 2240 -448) (1056 2240 -384)"
 			"material" "METAL/METALVENT012A"
 			"uaxis" "[1 0 0 128] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
@@ -82153,7 +82153,7 @@ entity
 	"_lightHDR" "-1 -1 -1 1"
 	"_lightscaleHDR" "1"
 	"_quadratic_attn" "1"
-	"origin" "1088 2207.91 -416"
+	"origin" "1088 2215.91 -416"
 	editor
 	{
 		"color" "220 30 220"
@@ -82173,9 +82173,9 @@ entity
 	"_lightHDR" "-1 -1 -1 1"
 	"_lightscaleHDR" "1"
 	"_quadratic_attn" "1"
-	"angles" "0 270 180"
+	"angles" "0 270 -180"
 	"pitch" "0"
-	"origin" "1088 2223.91 -416"
+	"origin" "1088 2231.91 -416"
 	editor
 	{
 		"color" "220 30 220"
