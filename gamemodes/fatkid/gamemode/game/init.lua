@@ -9,6 +9,7 @@ GM.ZombieWinMessage = "Fat Kid wins!"
 GM.NewZombieMessage = "is the new Fat Kid!"
 GM.NewZombiesMessage = "are the new Fat Kids!"
 GM.AZAbandonMessage = "The Fat Kid has abandoned the game!"
+GM.SkeletonAreaMessage = "Humans can't fit in here."
 GM.Human.Health = 100
 GM.Human.HealthRecharge = 1
 GM.Human.HealthRechargeDelay = 2
