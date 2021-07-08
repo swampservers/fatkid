@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "player\fat_kid_gregory\fat_kid_gregory_01_aviators_glass"
+	"$model" 1
+	"$nocull" 1
+	"$alphatest" 1
+	"$envmapmode" 1
+	"$envmap" "env_cubemap"
+	"$envmapsaturation" .5
+	"$envmapcontrast" 1
+
+}
