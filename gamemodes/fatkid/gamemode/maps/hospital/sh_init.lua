@@ -1,6 +1,7 @@
 ﻿-- Copyright (C) 2021 Swamp Servers. https://github.com/swampservers/fatkid
 -- Use is subject to a restrictive license, please see: https://github.com/swampservers/fatkid/blob/master/LICENSE
 FATKID_BACKSTORY = [[
+<h2>Welcome to Fattywood Medical Center.</h2>
 <p>
 It was a normal school day for Gregory, getting dodgeballs thrown at him, and getting shot at in school.
 Until... someone threw a dodgeball at his fat stomach and burst his appendix! He had to get to a hospital immediately!

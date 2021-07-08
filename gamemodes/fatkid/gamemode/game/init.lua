@@ -231,10 +231,13 @@ function GM:PlayerSetModel(ply)
         ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_L_Clavicle"), Vector(0, 0, 1.5))
     else
         ply:SetModelScale(1)
-        ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_R_UpperArm"), Vector(0, 0, 0))
-        ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_L_UpperArm"), Vector(0, 0, 0))
-        ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_R_Clavicle"), Vector(0, 0, 0))
-        ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_L_Clavicle"), Vector(0, 0, 0))
+
+        if ply:LookupBone("ValveBiped.Bip01_R_UpperArm") then
+            ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_R_UpperArm"), Vector(0, 0, 0))
+            ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_L_UpperArm"), Vector(0, 0, 0))
+            ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_R_Clavicle"), Vector(0, 0, 0))
+            ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_L_Clavicle"), Vector(0, 0, 0))
+        end
     end
 end
 
