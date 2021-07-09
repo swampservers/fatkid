@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"player\fat_kid_gregory\fat_kid_gregory_01_parted_right"
+	"$bumpmap"	"dev/bump_normal"
+	"$lightwarptexture"	"dev/identitylightwarp"
+	"$color2" "{130 110 80}"
+
+	"$halflambert" 1
+	"$ambientocclusion" 1
+
+	"$nocull" 1
+	"$alphatest" 1
+	"$allowalphatocoverage" 1
+
+	"$phong" 1
+	"$phongexponent" 5
+	"$phongboost" 0.1
+	"$phongfresnelranges" "[0 0.5 1]"
+
+	"$blendtintbybasealpha" 0
+	"$blendtintcoloroverbase" 1
+}

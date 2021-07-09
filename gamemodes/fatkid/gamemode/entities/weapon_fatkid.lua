@@ -34,7 +34,7 @@ function SWEP:Initialize()
 end
 
 function SWEP:PrimaryAttack()
-    self:SetNextPrimaryFire(CurTime() + 0.38)
+    self:SetNextPrimaryFire(CurTime() + 1) --0.38)
 
     --This is necessary to make the attack animation show in third person
     if CLIENT and IsFirstTimePredicted() then

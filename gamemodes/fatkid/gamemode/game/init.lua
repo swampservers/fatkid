@@ -54,7 +54,8 @@ GM.AZ.SpawnWeapon = "weapon_fatkid"
 GM.AZ.CanPickupWeapons = false
 GM.AZ.ReceiveAmmo = false
 
-GM.AZ.PlayerModels = {"models/obese_male.mdl"}
+--models/obese_male.mdl"} TODO remove old assets after checking new model
+GM.AZ.PlayerModels = {"models/player/fat_kid_gregory/fat_kid_gregory_01.mdl"}
 
 GM.AZ.HideHands = true
 
@@ -232,10 +233,13 @@ function GM:PlayerSetModel(ply)
         ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_L_Clavicle"), Vector(0, 0, 1.5))
     else
         ply:SetModelScale(1)
-        ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_R_UpperArm"), Vector(0, 0, 0))
-        ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_L_UpperArm"), Vector(0, 0, 0))
-        ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_R_Clavicle"), Vector(0, 0, 0))
-        ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_L_Clavicle"), Vector(0, 0, 0))
+
+        if ply:LookupBone("ValveBiped.Bip01_R_UpperArm") then
+            ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_R_UpperArm"), Vector(0, 0, 0))
+            ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_L_UpperArm"), Vector(0, 0, 0))
+            ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_R_Clavicle"), Vector(0, 0, 0))
+            ply:ManipulateBonePosition(ply:LookupBone("ValveBiped.Bip01_L_Clavicle"), Vector(0, 0, 0))
+        end
     end
 end
 

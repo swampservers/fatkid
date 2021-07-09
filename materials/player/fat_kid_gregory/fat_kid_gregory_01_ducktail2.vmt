@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	$basetexture "player\fat_kid_gregory\fat_kid_gregory_01_ducktail2"
+	//$bumpmap		"dev/flat_normal"
+	$nocull			1
+	$color2 "{130 110 80}"
+	$phong 			1
+	$phongexponent 	5
+	$phongboost 	1.0
+	$phongfresnelranges "[0 0.5 1]"
+
+}

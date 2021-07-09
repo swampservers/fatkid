@@ -1,6 +1,7 @@
 ﻿-- Copyright (C) 2021 Swamp Servers. https://github.com/swampservers/fatkid
 -- Use is subject to a restrictive license, please see: https://github.com/swampservers/fatkid/blob/master/LICENSE
 FATKID_BACKSTORY = [[
+<h2>Welcome to Fattywood Junior High</h2>
 <p>
 It was just an ordinary day of gym class.
 Gregory, the class fat kid, was, as usual, being bullied for his ineptitude at sports.

@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "player\fat_kid_gregory\fat_kid_gregory_01_plain"
+	"$model" 1
+	"$color2" "{79 79 121}"
+}

@@ -1,6 +1,7 @@
 ﻿-- Copyright (C) 2021 Swamp Servers. https://github.com/swampservers/fatkid
 -- Use is subject to a restrictive license, please see: https://github.com/swampservers/fatkid/blob/master/LICENSE
 FATKID_BACKSTORY = [[
+<h2>Welcome to the Fattywood Industrial Park</h2>
 <p>
 The class has taken a field trip to the industrial area of Fattywood.
 Unfortunately, Gregory, the class Fat Kid, forgot to bring his lunch.
