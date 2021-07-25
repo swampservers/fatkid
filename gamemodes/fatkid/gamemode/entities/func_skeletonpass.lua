@@ -24,7 +24,7 @@ if CLIENT then
 
     hook.Add("HUDPaint", "SkeletonAreaNotify", function()
         if SkeletonAreaNotify > CurTime() then
-            draw.DrawText("Humans can't fit in here", "DermaLarge", ScrW() * 0.5, ScrH() * 0.55, Color(255, 0, 0, 255), TEXT_ALIGN_CENTER)
+            draw.DrawText(GM.SkeletonAreaMessage, "DermaLarge", ScrW() * 0.5, ScrH() * 0.55, Color(255, 0, 0, 255), TEXT_ALIGN_CENTER)
         end
     end)
 end
