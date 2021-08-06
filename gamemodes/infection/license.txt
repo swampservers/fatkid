@@ -1,4 +1,4 @@
-FATKID LICENSE VERSION 1
+FATKID LICENSE VERSION 1.1
 
 By downloading or using The Software (as defined below), you agree to this contract. This agreement may be negotiable on an individual basis; contact swampservers@gmail.com for more information.
 
@@ -19,7 +19,7 @@ Exception/Limitations to section 1:
 - You are permitted to show a video advertisement to Players upon their initial connection to the server or between rounds using a service such as https://gameserverads.com/ or an equivalent. The ads must be shown to all Players equally to the extent that ad availability permits. IF YOU HOST OTHER GAME SERVERS WHICH DO NOT RUN OR DISTRIBUTE ANY PART OF THE SOFTWARE, NONE OF SECTION 1 SHALL INTERFERE WITH YOUR RIGHTS TO RUN AND MONETIZE THOSE OTHER SERVERS.
 
 2. Extension license agreement:
-You may create Extensions for The Software, SUBJECT TO THE FOLLOWING AGREEMENT: You agree that Swamp Servers has a PERMANENT, IRREVOCABLE, WORLDWIDE, TRANSFERABLE LICENSE to include your Extension in The Software subject to no additional restrictions, and anyone who uses The Software is granted a PERMANENT, IRREVOCABLE, WORLDWIDE, TRANSFERABLE LICENSE to use your Extension on their own Fat Kid Server and distribute it to their Players subject to no additional restrictions. You are also required to make any Lua source code for your Extension publicly viewable, if applicable. A good way to do this is by uploading it to a "fork" of our GitHub repository. Note that you still own the copyright to your Extension; but this allows us and all users of The Software to use your Extension.
+You may create Extensions for The Software, SUBJECT TO THE FOLLOWING AGREEMENT: You agree that Swamp Servers has a PERMANENT, IRREVOCABLE, WORLDWIDE, TRANSFERABLE LICENSE to include your Extension in The Software subject to no additional restrictions, and anyone who uses The Software is granted a PERMANENT, IRREVOCABLE, WORLDWIDE, TRANSFERABLE LICENSE to use your Extension on their own Fat Kid Server and distribute it to their Players subject to no additional restrictions. You are also required to make any source code or similar data for your Extension publicly viewable, if applicable. A good way to do this is by uploading it to a "fork" of our GitHub repository. Note that you still own the copyright to your Extension; but this allows us and all users of The Software to use your Extension.
 
 3. Modification restrictions:
 You are not permitted to modify or remove any line in any file which contains a link to https://github.com/swampservers/fatkid or https://github.com/swampservers/fatkid/blob/master/LICENSE from any copy of The Software, nor are you permitted to modify or remove any file containing this license, or run or distribute any copy of The Software with any modification/removal described in this section.
