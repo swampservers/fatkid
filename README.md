@@ -16,15 +16,15 @@ This repo actually contains 3 gamemodes - *Fat Kid*, *Duck Hunt*, and *Infection
 
 # Mapping
 
-VMFs are included, please use them for examples. There is also an .fgd. All in [maps/](https://github.com/swampservers/fatkid/tree/master/maps).
+VMFs are included, please use them for examples. If you want to alter an existing map, please bear in mind that some maps contain custom content which you will need to extract from the BSPs and repack into when compiling. There is also an .fgd. All in [maps/](https://github.com/swampservers/fatkid/tree/master/maps).
 
 IF YOU WANT TO SUBMIT A NEW MAP, YOU MUST ALSO WRITE A BACKSTORY! See the [gymnasium](https://github.com/swampservers/fatkid/blob/master/gamemodes/fatkid/gamemode/maps/gymnasium/sh_init.lua) backstory for an example. The backstory should be HTML and will be shown to players when they initially join the server. It should be placed in `gamemodes/fatkid/gamemode/maps/(name of map not including fatkid_ or any number)/sh_init.lua` similarly to the current maps.
 
 - To create barricades: Use frozen prop_physics or func_breakable. Name them "barricade_X" where X is a number. All entities with the same barricade name will share a health bar (which is tracked by the gamemode).
-- To make skeleton-only tunnels: Make a trigger brush and tie it to "func_skeletonpass". Only skeletons can walk through it. Make a different entity for each brush.
+- To make skeleton-only tunnels: Make a trigger brush and tie it to "[func_skeletonpass](https://github.com/swampservers/fatkid/blob/master/gamemodes/fatkid/gamemode/entities/func_skeletonpass.lua)" or "[func_skeletongate](https://github.com/swampservers/fatkid/blob/master/gamemodes/fatkid/gamemode/entities/func_skeletongate.lua)". Only skeletons can walk through it. Make a different entity for each brush.
 - Spawnpoints: info_player_start for humans, info_zombie_start for skeletons (if none they use human spawns), info_az_start for fat kid (if none he uses skeleton spawns or human spawns)
-- Respawning weapons: Just place frozen weapon entities; the respawning is handled by code in the gamemode.
-- Map-specific Lua (such as dodgeball spawning and traffic cars): Add your code to a folder with the map name as shown [here](https://github.com/swampservers/fatkid/tree/master/gamemodes/fatkid/gamemode/maps)
+- Respawning weapons: Just place frozen weapon entities; the respawning is handled by code in the gamemode. If you do not want a weapon to respawn, name it "norespawn".
+- Map-specific Lua (such as dodgeball spawning and traffic cars): Add your code to a folder with the map name as shown [here](https://github.com/swampservers/fatkid/tree/master/gamemodes/fatkid/gamemode/maps). Local variables such as barricade health can be defined for your map in it's respective init.lua file.
 - Props: When the fat kid uses his stun attack, all nearby prop_physics will be unfrozen and have some force added. Using frozen prop_physics can make your map more exciting.
 - General practices: Don't make areas too big and open; it makes it too easy for skinny kids to shoot the skeletons. Try to make sure there are at least two ways for skeletons to get to any area to prevent them from getting bored of running through a single doorway and dying over and over.
 
