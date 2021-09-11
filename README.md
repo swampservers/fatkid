@@ -44,6 +44,8 @@ fatkid_underground: [AltShadow](https://steamcommunity.com/id/altshadow/)
 
 fatkid_hospital: [Big Floppa](https://steamcommunity.com/id/bigfloppers/)
 
+fatkid_catacombs: [Big Floppa](https://steamcommunity.com/id/bigfloppers/) (originally made by some guy named Scott)
+
 duckhunt_pond: [swamponions](https://steamcommunity.com/id/swamponions/)
 
 Playermodel: [Rottweiler](https://steamcommunity.com/sharedfiles/filedetails/?id=416939663)
