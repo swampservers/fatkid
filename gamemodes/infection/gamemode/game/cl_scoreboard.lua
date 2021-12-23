@@ -137,7 +137,7 @@ local PLAYER_LINE = {
         if (self.Muted == nil or self.Muted ~= self.Player:IsMuted()) then
             self.Muted = self.Player:IsMuted()
 
-            if (self.Muted) then
+            if self.Muted then
                 self.Mute:SetImage("icon32/muted.png")
             else
                 self.Mute:SetImage("icon32/unmuted.png")

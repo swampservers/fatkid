@@ -327,7 +327,7 @@ else
         --flash of light
         local dlight = DynamicLight(LocalPlayer():EntIndex())
 
-        if (dlight) then
+        if dlight then
             dlight.pos = SlamCenter
             dlight.r = 100
             dlight.g = 100
