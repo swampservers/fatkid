@@ -8,7 +8,7 @@ end)
 
 hook.Add("MapSetup", "Gymnasium_Dodgeballs", function()
     for i = 1, 10 do
-        e = ents.Create("dodgeball")
+        local e = ents.Create("dodgeball")
         e:SetPos(Vector(math.random(-325, 325), math.random(0, 545), math.random(100, 300)))
         e:Spawn()
         e:Activate()

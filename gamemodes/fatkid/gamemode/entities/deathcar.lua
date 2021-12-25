@@ -41,10 +41,6 @@ function ENT:PhysicsCollide(data, phys)
     end
 end
 
-function zzero(v)
-    return Vector(v.x, v.y, 0)
-end
-
 function ENT:Think()
     if CLIENT then return end
     self.POS = self.POS or self:GetPos()
@@ -72,6 +68,10 @@ function ENT:Think()
         if v:GetPos():Distance(self.POS) < 72 then
             self:Touch(v)
         else
+            local function zzero(v)
+                return Vector(v.x, v.y, 0)
+            end
+
             nh = zzero(v:GetPos() - self.POS):GetNormalized() * self.VELOCITY
         end
     end
@@ -95,12 +95,12 @@ function ENT:Think()
         self.HEADING = nh
     end
 
-    self.POS = self.POS + (self.HEADING * FrameTime())
+    self.POS = self.POS + self.HEADING * FrameTime()
     self:SetPos(self.POS)
     self:SetAngles(self.HEADING:Angle())
 
     --self:GetPhysicsObject():SetVelocity(self.HEADING)
-    if (self.POS.x < self.MINX or self.POS.x > self.MAXX or self.POS.y < (self.SEEKPLAYERY or 0)) then
+    if self.POS.x < self.MINX or self.POS.x > self.MAXX or self.POS.y < (self.SEEKPLAYERY or 0) then
         self:Remove()
     end
 

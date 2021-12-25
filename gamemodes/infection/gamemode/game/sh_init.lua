@@ -37,7 +37,7 @@ end
 --Disable friendly fire
 function GM:PlayerShouldTakeDamage(ply, attacker)
     if attacker:IsPlayer() and attacker ~= ply then
-        if (ply:Team() == attacker:Team()) or (ply:Team() + attacker:Team() == TEAM_ZOMBIE + TEAM_AZ) then return false end
+        if ply:Team() == attacker:Team() or ply:Team() + attacker:Team() == TEAM_ZOMBIE + TEAM_AZ then return false end
     end
 
     return true

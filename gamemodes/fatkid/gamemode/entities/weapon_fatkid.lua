@@ -65,7 +65,7 @@ function SWEP:PrimaryAttack()
             end
         end)
 
-        local center = self.Owner:GetPos() + (self.Owner:GetAimVector() * 48)
+        local center = self.Owner:GetPos() + self.Owner:GetAimVector() * 48
         local closestDist = 1000
         local ply = nil
 
@@ -217,7 +217,7 @@ function SWEP:SecondaryAttack()
             if IsValid(self) and IsValid(self.Owner) and self.Owner:Alive() then
                 local v = self.Owner:EyeAngles():Forward()
                 v = Vector(v.x, v.y, 0):GetNormalized()
-                SlamCenter = self.Owner:GetPos() + (v * 90) + Vector(0, 0, 1)
+                SlamCenter = self.Owner:GetPos() + v * 90 + Vector(0, 0, 1)
                 SlamCenter = FindFloor(SlamCenter)
                 --do raycast to prevent going thru celing
                 local ForceCenter = self.Owner:GetPos() - Vector(0, 0, 100)
@@ -356,7 +356,7 @@ function FatKidSlamForce(ent, SlamCenter, ForceCenter, PlayerPos)
     for i = 0, ent:GetPhysicsObjectCount() - 1 do
         local phys = ent:GetPhysicsObjectNum(i)
 
-        if IsValid(phys) and ((not WorldOccludes(SlamCenter + Vector(0, 0, 20), phys:GetPos() + Vector(0, 0, 1))) or (not WorldOccludes(PlayerPos + Vector(0, 0, 32), phys:GetPos() + Vector(0, 0, 1)))) then
+        if IsValid(phys) and (not WorldOccludes(SlamCenter + Vector(0, 0, 20), phys:GetPos() + Vector(0, 0, 1)) or not WorldOccludes(PlayerPos + Vector(0, 0, 32), phys:GetPos() + Vector(0, 0, 1))) then
             phys:Wake()
             phys:EnableMotion(true)
             local force = phys:GetPos() - ForceCenter

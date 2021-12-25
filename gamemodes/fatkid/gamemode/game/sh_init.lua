@@ -15,7 +15,7 @@ team.SetColor(TEAM_AZ, Color(220, 20, 10))
 --Disable friendly fire and self harm
 function GM:PlayerShouldTakeDamage(ply, attacker)
     if attacker:IsPlayer() then
-        if (ply:Team() == attacker:Team()) or (ply:Team() + attacker:Team() == TEAM_ZOMBIE + TEAM_AZ) then return false end
+        if ply:Team() == attacker:Team() or ply:Team() + attacker:Team() == TEAM_ZOMBIE + TEAM_AZ then return false end
     end
 
     return true

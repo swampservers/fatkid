@@ -175,9 +175,9 @@ hook.Add("Clock", "Fatkid_Balancing", function()
         end
     end
 
-    local progress = 1 - (RoundTimer / GAMEMODE.RoundDuration)
-    GAMEMODE.BarricadeDamageMod = (2.0 / (math.max(humans, 3))) + 0.08
-    GAMEMODE.AZ.TakeDamageScale = (GAMEMODE.FatKidDamageMod or 1) * ((0.55 / (math.max(humans, 3))) + 0.09)
+    local progress = 1 - RoundTimer / GAMEMODE.RoundDuration
+    GAMEMODE.BarricadeDamageMod = 2.0 / math.max(humans, 3) + 0.08
+    GAMEMODE.AZ.TakeDamageScale = (GAMEMODE.FatKidDamageMod or 1) * (0.55 / math.max(humans, 3) + 0.09)
     GAMEMODE.AZ.Speed = Lerp(progress, GAMEMODE.AZ.StartSpeed, GAMEMODE.AZ.EndSpeed)
     GAMEMODE.Zombie.Speed = Lerp(progress, GAMEMODE.Zombie.StartSpeed, GAMEMODE.Zombie.EndSpeed)
 
@@ -294,7 +294,7 @@ hook.Add("EntityTakeDamage", "Fatkid_BarricadeDamage", function(target, dmg)
                 dmg:ScaleDamage(GAMEMODE.BarricadeDamageTypeMod[dmg:GetDamageType()])
             end
 
-            GAMEMODE.Barricades[name].health = GAMEMODE.Barricades[name].health - (dmg:GetDamage() * GAMEMODE.BarricadeDamageMod)
+            GAMEMODE.Barricades[name].health = GAMEMODE.Barricades[name].health - dmg:GetDamage() * GAMEMODE.BarricadeDamageMod
 
             if GAMEMODE.Barricades[name].health <= 0 then
                 for k, v in next, GAMEMODE.Barricades[name].props do
@@ -320,7 +320,7 @@ hook.Add("EntityTakeDamage", "Fatkid_AntiGrenadeKill", function(target, dmg)
     local att = dmg:GetAttacker()
 
     if att:IsPlayer() then
-        if att:Team() == TEAM_ZOMBIE and (not dmg:IsDamageType(DMG_CLUB)) then return true end
+        if att:Team() == TEAM_ZOMBIE and not dmg:IsDamageType(DMG_CLUB) then return true end
     end
 end)
 

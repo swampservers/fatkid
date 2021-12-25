@@ -89,14 +89,14 @@ local PLAYER_LINE = {
     end,
     --local friend = self.Player:GetFriendStatus() --MsgN( pl, " Friend: ", friend )
     Think = function(self)
-        if (not IsValid(self.Player)) then
+        if not IsValid(self.Player) then
             self:SetZPos(9999) -- Causes a rebuild
             self:Remove()
 
             return
         end
 
-        if (self.PName == nil or self.PName ~= self.Player:Nick()) then
+        if self.PName == nil or self.PName ~= self.Player:Nick() then
             self.PName = self.Player:Nick()
             self.Name:SetText(self.PName)
         end
@@ -115,7 +115,7 @@ local PLAYER_LINE = {
 		end
 		]]
         --
-        if (self.NumPing == nil or self.NumPing ~= self.Player:Ping()) then
+        if self.NumPing == nil or self.NumPing ~= self.Player:Ping() then
             self.NumPing = self.Player:Ping()
             self.Ping:SetText(self.NumPing)
         end
@@ -134,7 +134,7 @@ local PLAYER_LINE = {
 
         self.Team:SetText(GAMEMODE:SelectPlayerConfig(self.Player).ScoreboardName)
 
-        if (self.Muted == nil or self.Muted ~= self.Player:IsMuted()) then
+        if self.Muted == nil or self.Muted ~= self.Player:IsMuted() then
             self.Muted = self.Player:IsMuted()
 
             if self.Muted then
@@ -148,7 +148,7 @@ local PLAYER_LINE = {
             end
         end
 
-        if (self.Player:Team() == TEAM_CONNECTING) then
+        if self.Player:Team() == TEAM_CONNECTING then
             self:SetZPos(2000 + self.Player:EntIndex())
 
             return
@@ -158,7 +158,7 @@ local PLAYER_LINE = {
         self:SetZPos(scoremod + self.Player:EntIndex())
     end,
     Paint = function(self, w, h)
-        if (not IsValid(self.Player)) then return end
+        if not IsValid(self.Player) then return end
         draw.RoundedBox(4, 0, 0, w, h, GAMEMODE:SelectPlayerConfig(self.Player).ScoreboardColor)
     end
 }
@@ -199,7 +199,7 @@ local SCORE_BOARD = {
         local plyrs = player.GetAll()
 
         for id, pl in pairs(plyrs) do
-            if (IsValid(pl.ScoreEntry)) then continue end
+            if IsValid(pl.ScoreEntry) then continue end
             pl.ScoreEntry = vgui.CreateFromTable(PLAYER_LINE, pl.ScoreEntry)
             pl.ScoreEntry:Setup(pl)
             self.Scores:AddItem(pl.ScoreEntry)
@@ -210,11 +210,11 @@ local SCORE_BOARD = {
 SCORE_BOARD = vgui.RegisterTable(SCORE_BOARD, "EditablePanel")
 
 function GM:ScoreboardShow()
-    if (not IsValid(g_Scoreboard)) then
+    if not IsValid(g_Scoreboard) then
         g_Scoreboard = vgui.CreateFromTable(SCORE_BOARD)
     end
 
-    if (IsValid(g_Scoreboard)) then
+    if IsValid(g_Scoreboard) then
         g_Scoreboard:Show()
         g_Scoreboard:MakePopup()
         g_Scoreboard:SetKeyboardInputEnabled(false)
@@ -222,7 +222,7 @@ function GM:ScoreboardShow()
 end
 
 function GM:ScoreboardHide()
-    if (IsValid(g_Scoreboard)) then
+    if IsValid(g_Scoreboard) then
         g_Scoreboard:Hide()
     end
 end

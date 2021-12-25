@@ -24,15 +24,15 @@ hook.Add("HUDPaint", "FatKidTip", function()
     local cvName = "infection_" .. GAMEMODE.variant .. "_" .. cfg.ShortName .. "_hint"
     local cv = GetConVar(cvName)
     if not cv:GetBool() then return end
-    msg = "Left Click: Eat  |  Right Click: Stun"
+    local msg = "Left Click: Eat  |  Right Click: Stun"
     surface.SetFont(GAMEMODE.UI.LargeText)
     local w, h = surface.GetTextSize(msg)
     local inc = h
-    draw.WordBox(GAMEMODE.UI.BorderSize, ((ScrW() - w) / 2) - GAMEMODE.UI.BorderSize, ScrH() * 0.7, msg, GAMEMODE.UI.LargeText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
-    msg = "Press F1 to hide this."
+    draw.WordBox(GAMEMODE.UI.BorderSize, (ScrW() - w) / 2 - GAMEMODE.UI.BorderSize, ScrH() * 0.7, msg, GAMEMODE.UI.LargeText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
+    local msg = "Press F1 to hide this."
     surface.SetFont(GAMEMODE.UI.SmallText)
     local w, h = surface.GetTextSize(msg)
-    draw.WordBox(GAMEMODE.UI.BorderSize, ((ScrW() - w) / 2) - GAMEMODE.UI.BorderSize, (ScrH() * 0.7) + (inc * 2), msg, GAMEMODE.UI.SmallText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
+    draw.WordBox(GAMEMODE.UI.BorderSize, (ScrW() - w) / 2 - GAMEMODE.UI.BorderSize, ScrH() * 0.7 + inc * 2, msg, GAMEMODE.UI.SmallText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
 end)
 
 --Give third person view to fat kid
@@ -42,7 +42,7 @@ hook.Add("CalcView", "FatKid_Thirdperson", function(ply, pos, angles, fov)
 
         local trace = {
             start = pos,
-            endpos = pos - (angles:Forward() * dist),
+            endpos = pos - angles:Forward() * dist,
             mask = MASK_SOLID_BRUSHONLY
         }
 
@@ -50,9 +50,9 @@ hook.Add("CalcView", "FatKid_Thirdperson", function(ply, pos, angles, fov)
         local view = {}
 
         if trace.Hit then
-            view.origin = pos - (angles:Forward() * ((dist * trace.Fraction) - 5))
+            view.origin = pos - angles:Forward() * (dist * trace.Fraction - 5)
         else
-            view.origin = pos - (angles:Forward() * dist)
+            view.origin = pos - angles:Forward() * dist
         end
 
         view.angles = angles

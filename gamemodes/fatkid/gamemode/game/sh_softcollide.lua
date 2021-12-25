@@ -38,11 +38,11 @@ hook.Add("Move", "SoftCollide", function(ply, data)
 
                 --PLAYERS ARE AT SAME HEIGHT
                 if check then
-                    plypos2 = Vector(plypos.x, plypos.y, 0)
+                    local plypos2 = Vector(plypos.x, plypos.y, 0)
                     otherpos = Vector(otherpos.x, otherpos.y, 0)
 
                     if plypos2:Distance(otherpos) < SCpushsize then
-                        mult = Vector(data:GetVelocity().x, data:GetVelocity().y, 0):Length() + 1.2
+                        local mult = Vector(data:GetVelocity().x, data:GetVelocity().y, 0):Length() + 1.2
                         mult = mult * ((10 + SCpushsize - plypos2:Distance(otherpos)) / SCpushsize) * 2
                         local diff = (plypos2 - otherpos):GetNormalized() * mult
                         velchange = velchange + Vector(diff.x, diff.y, 0)
@@ -52,10 +52,10 @@ hook.Add("Move", "SoftCollide", function(ply, data)
         end
 
         data:SetVelocity(data:GetVelocity() + velchange)
-        vdd = Vector(data:GetVelocity().x, data:GetVelocity().y, 0)
+        local vdd = Vector(data:GetVelocity().x, data:GetVelocity().y, 0)
 
         if vdd:Length() > 220 then
-            data:SetVelocity((vdd:GetNormalized() * 220) + Vector(0, 0, data:GetVelocity().z))
+            data:SetVelocity(vdd:GetNormalized() * 220 + Vector(0, 0, data:GetVelocity().z))
         end
     end
 
@@ -91,12 +91,12 @@ hook.Add("Move", "SoftCollide", function(ply, data)
 
                 --PLAYERS ARE AT SAME HEIGHT
                 if check then
-                    plypos2 = Vector(plypos.x, plypos.y, 0)
+                    local plypos2 = Vector(plypos.x, plypos.y, 0)
                     otherpos = Vector(otherpos.x, otherpos.y, 0)
 
-                    if plypos2:Distance(otherpos) < (SCpushsize * 1.5) then
-                        mult = Vector(data:GetVelocity().x, data:GetVelocity().y, 0):Length() + 5
-                        mult = mult * ((10 + (SCpushsize * 1.5) - plypos2:Distance(otherpos)) / (SCpushsize * 1.5)) * 2
+                    if plypos2:Distance(otherpos) < SCpushsize * 1.5 then
+                        local mult = Vector(data:GetVelocity().x, data:GetVelocity().y, 0):Length() + 5
+                        mult = mult * ((10 + SCpushsize * 1.5 - plypos2:Distance(otherpos)) / (SCpushsize * 1.5)) * 2
                         local diff = (plypos2 - otherpos):GetNormalized() * mult
                         velchange = velchange + Vector(diff.x, diff.y, 0)
                     end
@@ -105,10 +105,10 @@ hook.Add("Move", "SoftCollide", function(ply, data)
         end
 
         data:SetVelocity(data:GetVelocity() + velchange)
-        vdd = Vector(data:GetVelocity().x, data:GetVelocity().y, 0)
+        local vdd = Vector(data:GetVelocity().x, data:GetVelocity().y, 0)
 
         if vdd:Length() > 450 then
-            data:SetVelocity((vdd:GetNormalized() * 450) + Vector(0, 0, data:GetVelocity().z))
+            data:SetVelocity(vdd:GetNormalized() * 450 + Vector(0, 0, data:GetVelocity().z))
         end
     end
 end)

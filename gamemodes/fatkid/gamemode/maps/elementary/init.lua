@@ -4,7 +4,7 @@ timer.Create("DeathCarSpawner", 1.3, 0, function()
     if math.random(1, 3) > 1 then return end
     if #ents.FindByClass("deathcar") > 15 then return end
     local seek = RoundTimer > 0 and GAMEMODE.RoundDuration - RoundTimer > 30
-    e = ents.Create("deathcar")
+    local e = ents.Create("deathcar")
     e.MINX = -1800
     e.MAXX = 1800
     e.VELOCITY = seek and 500 or 320
@@ -15,13 +15,13 @@ timer.Create("DeathCarSpawner", 1.3, 0, function()
 
     local d = math.random(0, 1) == 1
     e.DEFAULTDIR = Vector(d and 1 or -1, 0, 0)
-    e:SetPos(Vector(d and (e.MINX + 1) or (e.MAXX - 1), d and 1250 or 1400, 34))
+    e:SetPos(Vector(d and e.MINX + 1 or e.MAXX - 1, d and 1250 or 1400, 34))
     e:Spawn()
 end)
 
 hook.Add("MapSetup", "Gymnasium_Dodgeballs", function()
     for i = 1, 5 do
-        e = ents.Create("dodgeball")
+        local e = ents.Create("dodgeball")
         e:SetPos(Vector(math.random(280, 960), math.random(660, 1000), math.random(70, 90)))
         e:Spawn()
         e:Activate()
@@ -61,7 +61,7 @@ hook.Add("PlayerShouldTakeDamage", "Skellynoshock", function(ply, att)
 end)
 
 hook.Add("EntityTakeDamage", "Minigundmg", function(target, dmginfo)
-    if (IsValid(dmginfo:GetInflictor()) and dmginfo:GetInflictor():GetClass() == "func_tank") then
+    if IsValid(dmginfo:GetInflictor()) and dmginfo:GetInflictor():GetClass() == "func_tank" then
         dmginfo:ScaleDamage(4)
     end
 end)

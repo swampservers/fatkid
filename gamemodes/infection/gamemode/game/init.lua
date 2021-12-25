@@ -134,7 +134,7 @@ function GM:PlayerInitialSpawn(ply)
     self:PlayerJoinTeam(ply, TEAM_ZOMBIE)
 
     timer.Simple(0.1, function()
-        if RoundTimer > (self.RoundDuration - self.InfectedSpawnDelay) then
+        if RoundTimer > self.RoundDuration - self.InfectedSpawnDelay then
             ply:Kill()
         end
     end)
@@ -242,7 +242,7 @@ hook.Add("MapSetup", "Infection_WeaponRespawnSetup", function()
             class = v:GetClass(),
             pos = v:GetPos(),
             ang = v:GetAngles(),
-            freeze = (not v:GetPhysicsObject():IsMotionEnabled()),
+            freeze = not v:GetPhysicsObject():IsMotionEnabled(),
             lastIndex = v:EntIndex()
         })
     end
@@ -255,7 +255,7 @@ hook.Add("Clock", "Infection_WeaponRespawn", function()
         local last = ents.GetByIndex(v.lastIndex)
 
         if not IsValid(last) or IsValid(last:GetOwner()) then
-            e = ents.Create(v.class)
+            local e = ents.Create(v.class)
             e:SetPos(v.pos)
             e:SetAngles(v.ang)
             e:Spawn()
@@ -283,7 +283,7 @@ function GM:PlayerSelectSpawn(ply)
 
     for i = 0, 10 do
         SpawnIndex = SpawnIndex + 1
-        spawn = spawns[(SpawnIndex % #spawns) + 1]
+        spawn = spawns[SpawnIndex % #spawns + 1]
         if hook.Run("IsSpawnpointSuitable", ply, spawn, false) then return spawn end
     end
 
@@ -561,8 +561,6 @@ function GM:RoundStart()
             else
                 self:PlayerJoinTeam(v, TEAM_ZOMBIE)
             end
-
-            foundAZ = true
 
             if self.DelayAZSpawn then
                 timer.Simple(self.InfectedSpawnDelay, function()

@@ -122,7 +122,7 @@ hook.Add("Tick", "DuckHunt_OutOfWater", function()
 end)
 
 hook.Add("EntityTakeDamage", "SharkNoDrown", function(target, dmginfo)
-    if ((not target:IsPlayer()) or target:Team() == TEAM_ZOMBIE) and dmginfo:GetDamageType() == DMG_DROWN then return true end
+    if (not target:IsPlayer() or target:Team() == TEAM_ZOMBIE) and dmginfo:GetDamageType() == DMG_DROWN then return true end
 end)
 
 function GM:PlayerCanHearPlayersVoice(listener, talker)

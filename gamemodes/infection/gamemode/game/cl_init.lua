@@ -50,7 +50,7 @@ hook.Add("HUDPaint", "DrawHint", function()
     local msg = cfg.HintText .. " (press F1 to toggle hint)"
     surface.SetFont(GAMEMODE.UI.SmallText)
     local w, h = surface.GetTextSize(msg)
-    draw.WordBox(GAMEMODE.UI.BorderSize, ((ScrW() - w) / 2) - GAMEMODE.UI.BorderSize, ScrH() - (h + (3 * GAMEMODE.UI.BorderSize)), msg, GAMEMODE.UI.SmallText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
+    draw.WordBox(GAMEMODE.UI.BorderSize, (ScrW() - w) / 2 - GAMEMODE.UI.BorderSize, ScrH() - (h + 3 * GAMEMODE.UI.BorderSize), msg, GAMEMODE.UI.SmallText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
 end)
 
 hook.Add("HUDPaint", "Announcement", function()
@@ -58,7 +58,7 @@ hook.Add("HUDPaint", "Announcement", function()
     local alpha = CurTime() - AnnounceTime
     if alpha > 5 then return end
     alpha = math.min(4 * alpha, 5 - alpha) * 255
-    draw.DrawText(AnnounceText, GAMEMODE.UI.AnnounceText, (ScrW() / 2) + 2, (ScrH() * 0.3) + 2, ColorAlpha(Color(0, 0, 0), alpha), TEXT_ALIGN_CENTER)
+    draw.DrawText(AnnounceText, GAMEMODE.UI.AnnounceText, ScrW() / 2 + 2, ScrH() * 0.3 + 2, ColorAlpha(Color(0, 0, 0), alpha), TEXT_ALIGN_CENTER)
     draw.DrawText(AnnounceText, GAMEMODE.UI.AnnounceText, ScrW() / 2, ScrH() * 0.3, ColorAlpha(GAMEMODE.UI.TextColor, alpha), TEXT_ALIGN_CENTER)
 end)
 
@@ -75,28 +75,28 @@ hook.Add("HUDPaint", "RespawnTime", function()
 
     surface.SetFont(GAMEMODE.UI.LargeText)
     local w, h = surface.GetTextSize(msg)
-    draw.WordBox(GAMEMODE.UI.BorderSize, ((ScrW() - w) / 2) - GAMEMODE.UI.BorderSize, ScrH() * 0.8, msg, GAMEMODE.UI.LargeText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
+    draw.WordBox(GAMEMODE.UI.BorderSize, (ScrW() - w) / 2 - GAMEMODE.UI.BorderSize, ScrH() * 0.8, msg, GAMEMODE.UI.LargeText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
 end)
 
 hook.Add("HUDPaint", "OnePlayerOnline", function()
     if #player.GetAll() > 1 then return end
-    msg = "Waiting for another player to join..."
+    local msg = "Waiting for another player to join..."
     surface.SetFont(GAMEMODE.UI.LargeText)
     local w, h = surface.GetTextSize(msg)
-    draw.WordBox(GAMEMODE.UI.BorderSize, ((ScrW() - w) / 2) - GAMEMODE.UI.BorderSize, ScrH() * 0.8 - (2.5 * h), msg, GAMEMODE.UI.LargeText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
+    draw.WordBox(GAMEMODE.UI.BorderSize, (ScrW() - w) / 2 - GAMEMODE.UI.BorderSize, ScrH() * 0.8 - 2.5 * h, msg, GAMEMODE.UI.LargeText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
 end)
 
 hook.Add("HUDPaint", "RoundTime", function()
     if RoundTimer <= 0 then return end
-    msg = "Time Left: " .. FormatSeconds(RoundTimer)
+    local msg = "Time Left: " .. FormatSeconds(RoundTimer)
     surface.SetFont(GAMEMODE.UI.LargeText)
     local w, h = surface.GetTextSize(msg)
-    draw.WordBox(GAMEMODE.UI.BorderSize, ScrW() - (w + (GAMEMODE.UI.BorderSize * 4)), ScrH() * 0.8, msg, GAMEMODE.UI.LargeText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
+    draw.WordBox(GAMEMODE.UI.BorderSize, ScrW() - (w + GAMEMODE.UI.BorderSize * 4), ScrH() * 0.8, msg, GAMEMODE.UI.LargeText, GAMEMODE.UI.BGColor, GAMEMODE.UI.TextColor)
 end)
 
 function FormatSeconds(secs)
     local mins = math.floor(secs / 60)
-    secs = secs - (mins * 60)
+    secs = secs - mins * 60
 
     if secs < 10 then
         secs = "0" .. secs

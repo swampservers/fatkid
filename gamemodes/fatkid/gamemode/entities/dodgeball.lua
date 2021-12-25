@@ -75,7 +75,7 @@ function ENT:PhysicsCollide(data, phys)
         end
     else
         if data.Speed > 100 then
-            self:EmitSound("physics/rubber/rubber_tire_impact_" .. ((data.Speed > 200) and "hard" or "soft") .. tostring(math.random(3)) .. ".wav")
+            self:EmitSound("physics/rubber/rubber_tire_impact_" .. (data.Speed > 200 and "hard" or "soft") .. tostring(math.random(3)) .. ".wav")
         end
     end
 end

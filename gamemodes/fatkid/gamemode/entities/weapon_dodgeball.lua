@@ -48,7 +48,7 @@ function SWEP:PrimaryAttack()
         timer.Simple(0.1, function()
             if self and self.Owner then
                 local p1 = self.Owner:GetPos() + self.Owner:GetCurrentViewOffset()
-                local p2 = p1 + (self.Owner:GetAimVector() * 54)
+                local p2 = p1 + self.Owner:GetAimVector() * 54
 
                 local tr = util.TraceLine({
                     start = p1,
@@ -60,7 +60,7 @@ function SWEP:PrimaryAttack()
                     p2 = tr.HitPos
                 end
 
-                self:Throw(p2 - (self.Owner:GetAimVector() * 18), (self.Owner:GetAimVector() * 900) + self.Owner:GetVelocity(), self.Owner)
+                self:Throw(p2 - self.Owner:GetAimVector() * 18, self.Owner:GetAimVector() * 900 + self.Owner:GetVelocity(), self.Owner)
             end
         end)
     end
@@ -74,7 +74,7 @@ function SWEP:SecondaryAttack()
         timer.Simple(0.05, function()
             if self and self.Owner then
                 local p1 = self.Owner:GetPos() + self.Owner:GetCurrentViewOffset()
-                local p2 = p1 + (self.Owner:GetAimVector() * 54)
+                local p2 = p1 + self.Owner:GetAimVector() * 54
 
                 local tr = util.TraceLine({
                     start = p1,
@@ -86,7 +86,7 @@ function SWEP:SecondaryAttack()
                     p2 = tr.HitPos
                 end
 
-                self:Throw(p2 - (self.Owner:GetAimVector() * 18), self.Owner:GetVelocity(), self.Owner)
+                self:Throw(p2 - self.Owner:GetAimVector() * 18, self.Owner:GetVelocity(), self.Owner)
             end
         end)
     end
@@ -96,7 +96,7 @@ function SWEP:DrawWorldModel()
     render.SetColorModulation(1, 0, 0)
     local ply = self:GetOwner()
 
-    if (IsValid(ply)) then
+    if IsValid(ply) then
         local bn = "ValveBiped.Bip01_R_Hand"
         local bon = ply:LookupBone(bn) or 0
         local opos = self:GetPos()
@@ -152,7 +152,7 @@ function SWEP:Throw(pos, vel, owner)
     if self.throwin then return end
     self.throwin = true
     self:Remove()
-    e = ents.Create("dodgeball")
+    local e = ents.Create("dodgeball")
     e:SetPos(pos)
     e:Spawn()
     e:Activate()
