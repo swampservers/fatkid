@@ -19,14 +19,13 @@ end
 function ENT:Touch(ply)
 end
 
-local SKELETONGATE = "func_skeletongate"
 
 local function PlayerCanPassSkeletonGate(ply)
     return not ply:IsPlayer() or ply:Team() == 3
 end
 
 hook.Add("ShouldCollide", "func_skeletongate_collisionoverride", function(ent1, ent2)
-    if ent1:GetClass() == SKELETONGATE or ent2:GetClass() == SKELETONGATE then
+    if ent1:GetClass() == "func_skeletongate" or ent2:GetClass() == "func_skeletongate" then
         if ent1:IsPlayer() and not PlayerCanPassSkeletonGate(ent1) then return true end
         if ent2:IsPlayer() and not PlayerCanPassSkeletonGate(ent2) then return true end
 
