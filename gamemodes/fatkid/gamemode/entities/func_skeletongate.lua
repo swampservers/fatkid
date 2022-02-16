@@ -19,7 +19,6 @@ end
 function ENT:Touch(ply)
 end
 
-
 local function PlayerCanPassSkeletonGate(ply)
     return not ply:IsPlayer() or ply:Team() == 3
 end
