@@ -32,6 +32,8 @@ IF YOU WANT TO SUBMIT A NEW MAP, YOU MUST ALSO WRITE A BACKSTORY! See the [gymna
 
 Programmer and official server manager: [swamponions](https://steamcommunity.com/id/swamponions/)
 
+**NEW** fatkid_asylum_v1 [AltShadow](https://steamcommunity.com/id/altshadow/)
+
 fatkid_stripmall: [Lozhenge](https://steamcommunity.com/profiles/76561198078133569)
 
 fatkid_pitbase: [Lozhenge](https://steamcommunity.com/profiles/76561198078133569)
