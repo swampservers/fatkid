@@ -279,7 +279,7 @@ end)
 hook.Add("EntityTakeDamage", "Fatkid_BarricadeDamage", function(target, dmg)
     local name = target:GetName()
 
-    if name:sub(1, 9) == "barricade" then
+    if not target:IsPlayer() and name:StartWith("barricade") then
         local att = dmg:GetAttacker()
         local inf = dmg:GetInflictor()
         if att:EntIndex() == 0 then return end
@@ -288,6 +288,12 @@ hook.Add("EntityTakeDamage", "Fatkid_BarricadeDamage", function(target, dmg)
             if GAMEMODE.Barricades[name] == nil then return end
             if att:Team() == TEAM_ZOMBIE then return true end
             if att:Team() == TEAM_AZ then return end
+
+            -- Patch the crowbar damage from a gmod update...
+            if IsValid(att) and att:IsPlayer() and IsValid(att:GetActiveWeapon()) and att:GetActiveWeapon():GetClass() == "weapon_crowbar" and dmg:GetDamageType() == DMG_CLUB and dmg:GetDamage() == 10 then
+                dmg:SetDamage(25)
+            end
+
             dmg:ScaleDamage(GAMEMODE:SelectPlayerConfig(att).InflictDamageScale)
 
             if GAMEMODE.BarricadeDamageTypeMod[dmg:GetDamageType()] ~= nil then
