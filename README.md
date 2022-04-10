@@ -34,7 +34,7 @@ Programmer and official server manager: [swamponions](https://steamcommunity.com
 
 **NEW** fatkid_asylum_v1 [AltShadow](https://steamcommunity.com/id/altshadow/)
 
-fatkid_quarry: [Cody] with a lot of help from [Lozhenge](https://steamcommunity.com/id/codythewrestler)
+fatkid_quarry: mostly made by [Cody](https://steamcommunity.com/id/codythewrestler) but a lot of help from [Lozhenge](https://steamcommunity.com/profiles/76561198078133569)
 
 fatkid_stripmall: [Lozhenge](https://steamcommunity.com/profiles/76561198078133569)
 
