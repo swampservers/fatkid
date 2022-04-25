@@ -6,9 +6,11 @@ The game consists of rounds in which one player spawns as the "Fat Kid", a slow 
 
 I originally created this gamemode in 2015 and it was [popular on YouTube](https://www.youtube.com/results?search_query=gmod+fat+kid) for some time. It was kept proprietary for several years, but I've decided to open source it now to see what the community can do with it. The official server is available at: fatkid.swampservers.net (type `connect fatkid.swampservers.net` in console) and it is available on Steam Workshop [here](https://steamcommunity.com/sharedfiles/filedetails/?id=2467219933).
 
+We have an official Fat Kid Discord - check out the #fatkid channel in the [Swamp Servers Discord](https://swamp.sv/discord)!
+
 If you want to create a community server, please be aware that **this code is distributed with a [restrictive license](https://github.com/swampservers/fatkid/blob/master/LICENSE) which disallows you from selling any form of in-game items or privileges to players**. I don't want my gamemode to be ruined by pay-to-win nonsense; in fact, this is the main reason I kept the gamemode private for so long.
 
-I hope for community contribution to the gamemode. If you make a new map or other extension for it, please be aware that the [license](https://github.com/swampservers/fatkid/blob/master/LICENSE) gives us permission to include your work in this repository so everyone can use it. Extensions are required to be open source as spelled out in the license. We would also appreciate it if VMFs of maps are made available. For further information or help regarding development visit the development channel in the [Swamp Servers group chat room](https://steamcommunity.com/groups/swampservers).
+I hope for community contribution to the gamemode. If you make a new map or other extension for it, please be aware that the [license](https://github.com/swampservers/fatkid/blob/master/LICENSE) gives us permission to include your work in this repository so everyone can use it. Extensions are required to be open source as spelled out in the license. We would also appreciate it if VMFs of maps are made available. For further information or help regarding development visit the development channel in the [Swamp Discord](https://swamp.sv/discord).
 
 # Code
 
