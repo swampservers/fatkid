@@ -1,8 +1,8 @@
 versioninfo
 {
 	"editorversion" "400"
-	"editorbuild" "8538"
-	"mapversion" "336"
+	"editorbuild" "9174"
+	"mapversion" "337"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -20,7 +20,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "336"
+	"mapversion" "337"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -19137,6 +19137,10 @@ entity
 	"skin" "0"
 	"spawnflags" "256"
 	"targetname" "barricade_7"
+	connections
+	{
+		"OnBreak" "propclimbfinalareaskeletongate,Kill,,0,-1"
+	}
 	"origin" "-608 -672 608"
 	editor
 	{
@@ -19181,6 +19185,10 @@ entity
 	"skin" "0"
 	"spawnflags" "256"
 	"targetname" "barricade_7"
+	connections
+	{
+		"OnBreak" "propclimbfinalareaskeletongate,Kill,,0,-1"
+	}
 	"origin" "-559.96 -671.677 608"
 	editor
 	{
@@ -19225,6 +19233,10 @@ entity
 	"skin" "0"
 	"spawnflags" "256"
 	"targetname" "barricade_7"
+	connections
+	{
+		"OnBreak" "propclimbfinalareaskeletongate,Kill,,0,-1"
+	}
 	"origin" "-513.638 -663.288 608"
 	editor
 	{
@@ -19269,6 +19281,10 @@ entity
 	"skin" "0"
 	"spawnflags" "256"
 	"targetname" "barricade_7"
+	connections
+	{
+		"OnBreak" "propclimbfinalareaskeletongate,Kill,,0,-1"
+	}
 	"origin" "-465.598 -662.964 608"
 	editor
 	{
@@ -19361,6 +19377,10 @@ entity
 	"skin" "0"
 	"spawnflags" "256"
 	"targetname" "barricade_7"
+	connections
+	{
+		"OnBreak" "propclimbfinalareaskeletongate,Kill,,0,-1"
+	}
 	"origin" "-420 -668 608"
 	editor
 	{
