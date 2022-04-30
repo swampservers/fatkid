@@ -30,10 +30,13 @@ IF YOU WANT TO SUBMIT A NEW MAP, YOU MUST ALSO WRITE A BACKSTORY! See the [gymna
 - Props: When the fat kid uses his stun attack, all nearby prop_physics will be unfrozen and have some force added. Using frozen prop_physics can make your map more exciting.
 - General practices: Don't make areas too big and open; it makes it too easy for skinny kids to shoot the skeletons. Try to make sure there are at least two ways for skeletons to get to any area to prevent them from getting bored of running through a single doorway and dying over and over.
 - BSP filenames must start with "fatkid_" in lowercase in order for it to appear in the mapvote panel.
+- These files are added to the workshop addon, so try and keep the file size small (around 30-40mb is the limit).
 
 # Credits
 
 Programmer and official server manager: [swamponions](https://steamcommunity.com/id/swamponions/)
+
+**NEW** fatkid_pitbase [AltShadow](https://steamcommunity.com/id/altshadow/)
 
 **NEW** fatkid_asylum_v1 [AltShadow](https://steamcommunity.com/id/altshadow/)
 
