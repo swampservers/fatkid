@@ -1,4 +1,4 @@
-![banner](http://swampservers.net/infection/fatkidbanner.png)
+![banner](https://swamp.sv/s/fatkid/fatkidbanner.png)
 
 *Fat Kid* is a Garry's Mod remake of the classic Halo 3 custom game with the same name.
 
