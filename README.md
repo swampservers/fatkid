@@ -37,9 +37,11 @@ IF YOU WANT TO SUBMIT A NEW MAP, YOU MUST ALSO WRITE A BACKSTORY! See the [gymna
 
 Programmer and official server manager: [swamponions](https://steamcommunity.com/id/swamponions/)
 
-**NEW** fatkid_pitbase [AltShadow](https://steamcommunity.com/id/altshadow/)
+**NEW** fatkid_mansion: [Lozhenge](https://steamcommunity.com/profiles/76561198078133569)
 
-**NEW** fatkid_asylum_v1 [AltShadow](https://steamcommunity.com/id/altshadow/)
+fatkid_pitbase [AltShadow](https://steamcommunity.com/id/altshadow/)
+
+fatkid_asylum_v1 [AltShadow](https://steamcommunity.com/id/altshadow/)
 
 fatkid_quarry: mostly made by [Cody](https://steamcommunity.com/id/codythewrestler) but a lot of help from [Lozhenge](https://steamcommunity.com/profiles/76561198078133569)
 
