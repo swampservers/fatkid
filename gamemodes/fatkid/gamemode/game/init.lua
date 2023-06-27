@@ -15,6 +15,7 @@ GM.Human.HealthRecharge = 1
 GM.Human.HealthRechargeDelay = 2
 GM.Human.InflictDamageScale = 1
 GM.Human.TakeDamageScale = 1.6
+GM.Human.LastManStandingMultiplier = 0.5
 GM.Human.Speed = 225
 GM.Human.JumpPower = 200
 GM.Human.SpawnWeapon = ""

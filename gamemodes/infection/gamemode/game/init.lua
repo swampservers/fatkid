@@ -20,6 +20,7 @@ GM.Human.HealthRecharge = 1
 GM.Human.HealthRechargeDelay = 2
 GM.Human.InflictDamageScale = 1
 GM.Human.TakeDamageScale = 1
+GM.Human.LastManStandingMultiplier = 0.5
 GM.Human.HeadshotMultiplier = 2
 GM.Human.FallDamageMultiplier = 1
 GM.Human.Speed = 250
@@ -598,15 +599,15 @@ function GM:EntityTakeDamage(target, dmg)
             --todo do this smarter
             local lms = true
 
-            for i, v in ipairs(player.GetAll()) do
-                if v:Team() == TEAM_HUMAN and v ~= target then
+            for _, ply in ipairs(player.GetAll()) do
+                if ply:Team() == TEAM_HUMAN and ply ~= target then
                     lms = false
                     break
                 end
             end
 
             if lms then
-                dmg:ScaleDamage(GAMEMODE.LastManStandingDamageScale)
+                dmg:ScaleDamage(self:SelectPlayerConfig(target).LastManStandingMultiplier)
             end
         end
 
