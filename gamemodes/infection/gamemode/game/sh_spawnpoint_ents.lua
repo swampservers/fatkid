@@ -1,5 +1,6 @@
 ﻿-- Copyright (C) 2021 Swamp Servers. https://github.com/swampservers/fatkid
 -- Use is subject to a restrictive license, please see: https://github.com/swampservers/fatkid/blob/master/LICENSE
+AddCSLuaFile()
 GM.Human = GM.Human or {}
 GM.Zombie = GM.Zombie or {}
 GM.AZ = GM.AZ or {}
@@ -12,7 +13,6 @@ GM.AZ.SpawnpointClasses = {"info_player_az", "info_az_start", "info_player_oz", 
 
 -- Makes a spawnpoint entity under a bunch of different classnames
 ENT = {}
-AddCSLuaFile()
 DEFINE_BASECLASS("base_anim")
 
 if CLIENT then
@@ -23,6 +23,7 @@ end
 for _, group in pairs({GM.Human, GM.Zombie, GM.AZ}) do
     for _, cls in pairs(group.SpawnpointClasses) do
         scripted_ents.Register(ENT, cls)
+        print("Registering " .. cls)
     end
 end
 

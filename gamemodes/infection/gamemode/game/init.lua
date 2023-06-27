@@ -193,26 +193,20 @@ function GM:PlayerLoadout(ply)
 end
 
 hook.Add("MapSetup", "Infection_SpawnPoints", function()
-    local spawnTypes = {"info_player_start", "info_player_human", "info_player_deathmatch", "info_player_combine", "info_player_counterterrorist", "info_player_allies", "gmod_player_start", "info_player_teamspawn", "ins_spawnpoint", "aoc_spawnpoint", "dys_spawn_point", "info_player_knight", "diprip_start_team_blue", "info_player_blue", "info_player_coop"}
-
-    GAMEMODE.Human.Spawns = ents.FindByClasses(spawnTypes)
-
-    spawnTypes = {"info_player_zombie", "info_zombie_start", "info_player_rebel", "info_player_terrorist", "info_player_axis", "info_player_pirate", "info_player_viking", "diprip_start_team_red", "info_player_red"}
-
-    GAMEMODE.Zombie.Spawns = ents.FindByClasses(spawnTypes)
-
-    spawnTypes = {"info_player_az", "info_az_start", "info_player_oz", "info_oz_start", "info_player_zombiemaster"}
-
-    GAMEMODE.AZ.Spawns = ents.FindByClasses(spawnTypes)
+    GAMEMODE.Human.Spawns = ents.FindByClasses(GAMEMODE.Human.SpawnpointClasses)
+    GAMEMODE.Zombie.Spawns = ents.FindByClasses(GAMEMODE.Zombie.SpawnpointClasses)
+    GAMEMODE.AZ.Spawns = ents.FindByClasses(GAMEMODE.AZ.SpawnpointClasses)
     table.Shuffle(GAMEMODE.Human.Spawns)
     table.Shuffle(GAMEMODE.Zombie.Spawns)
     table.Shuffle(GAMEMODE.AZ.Spawns)
 
     if #GAMEMODE.Zombie.Spawns == 0 then
+        ErrorNoHalt("[Infection_SpawnPoints] 0 Zombie spawnpoints found! Falling back to Human spawnpoints...\n")
         GAMEMODE.Zombie.Spawns = GAMEMODE.Human.Spawns
     end
 
     if #GAMEMODE.AZ.Spawns == 0 then
+        ErrorNoHalt("[Infection_SpawnPoints] 0 AZ spawnpoints found! Falling back to Human spawnpoints...\n")
         GAMEMODE.AZ.Spawns = GAMEMODE.Zombie.Spawns
     end
 
