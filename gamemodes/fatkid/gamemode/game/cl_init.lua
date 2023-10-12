@@ -6,6 +6,7 @@ GM.AZ.ScoreboardName = "FAT KID"
 GM.Human.HintText = "You're a skinny kid! Your goal is to survive the round. Break down barricades to get better weapons, and run from the Fat Kid!"
 GM.Zombie.HintText = "You're a skeleton! You're fast but die easily. Use your speed to run down and kill the skinny kids!"
 GM.AZ.HintText = "You're the Fat Kid! Your goal is to eat all the skinny kids. Left click to eat a player, and right click to stun nearby skinny kids!"
+GM.SkeletonAreaMessage = "Humans can't fit in here." -- Default
 
 hook.Add("HUDPaint", "FatKidTip", function()
     if not LocalPlayer():Alive() then return end

@@ -1,6 +1,6 @@
 ﻿-- Copyright (C) 2021 Swamp Servers. https://github.com/swampservers/fatkid
 -- Use is subject to a restrictive license, please see: https://github.com/swampservers/fatkid/blob/master/LICENSE
---GM.SkeletonAreaMessage = "" -- TODO: This is missing and causing lua errors
+
 hook.Add("MapSetup", "Gymnasium_PropFix", function()
     for k, v in next, ents.FindByModel("models/props_c17/lockers001a.mdl") do
         v:GetPhysicsObject():EnableMotion(false)
