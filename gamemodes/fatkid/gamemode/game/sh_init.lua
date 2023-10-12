@@ -8,6 +8,7 @@ GM.InfectedSpawnDelay = 30
 GM.DelayAZSpawn = false
 GM.UseAZ = true
 GM.KeepScore = false
+
 team.SetColor(TEAM_HUMAN, Color(90, 255, 255))
 team.SetColor(TEAM_ZOMBIE, Color(170, 170, 170))
 team.SetColor(TEAM_AZ, Color(220, 20, 10))
