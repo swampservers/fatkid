@@ -55,7 +55,7 @@ fatkid_swimmingpool: [PYROTEKNIK](https://steamcommunity.com/id/pyroteknik/)
 
 fatkid_gymnasium: [swamponions](https://steamcommunity.com/id/swamponions/)
 
-fatkid_elementary: [swamponions](https://steamcommunity.com/id/swamponions/) (a heavily modified [ph_elementary_school](https://steamcommunity.com/sharedfiles/filedetails/?id=2461335501) )
+**NEW** fatkid_elementary: [AltShadow](https://steamcommunity.com/id/altshadow/) (a heavily modified [ph_elementary_school](https://steamcommunity.com/sharedfiles/filedetails/?id=2461335501) )
 
 fatkid_underground: [AltShadow](https://steamcommunity.com/id/altshadow/)
 
