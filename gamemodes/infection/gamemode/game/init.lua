@@ -150,7 +150,7 @@ function GM:PlayerSpawn(ply)
     ply:SetWalkSpeed(config.Speed)
     ply:SetJumpPower(config.JumpPower)
 
-    -- TODO why is this necessary
+    -- TODO: why is this necessary
     timer.Simple(0, function()
         ply:SetJumpPower(config.JumpPower)
     end)
@@ -590,7 +590,7 @@ function GM:EntityTakeDamage(target, dmg)
         dmg:ScaleDamage(self:SelectPlayerConfig(target).TakeDamageScale)
 
         if target:Team() == TEAM_HUMAN then
-            --todo do this smarter
+            -- TODO: Do this smarter
             local lms = true
 
             for _, ply in ipairs(player.GetAll()) do

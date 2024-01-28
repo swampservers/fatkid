@@ -54,7 +54,7 @@ GM.AZ.SpawnWeapon = "weapon_fatkid"
 GM.AZ.CanPickupWeapons = false
 GM.AZ.ReceiveAmmo = false
 
---models/obese_male.mdl"} TODO remove old assets after checking new model
+--models/obese_male.mdl"} TODO: remove old assets after checking new model
 GM.AZ.PlayerModels = {"models/player/fat_kid_gregory/fat_kid_gregory_01.mdl"}
 
 GM.AZ.HideHands = true
