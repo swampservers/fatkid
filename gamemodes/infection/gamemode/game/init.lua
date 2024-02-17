@@ -482,7 +482,9 @@ function GM:InitPostEntity()
 end
 
 function GM:PostCleanupMap()
-    hook.Run("MapSetup")
+    timer.Simple(0, function()
+        hook.Run("MapSetup")
+    end)
 end
 
 function GM:RoundSetup()
