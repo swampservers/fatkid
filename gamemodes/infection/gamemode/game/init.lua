@@ -216,8 +216,8 @@ end)
 hook.Add("MapSetup", "Infection_WeaponRespawnSetup", function()
     local entList = {}
 
-    for k, v in next, GAMEMODE.MapWeapons do
-        for k2, v2 in next, ents.FindByClass(v.class) do
+    for k, v in ipairs(GAMEMODE.MapWeapons) do
+        for k2, v2 in ipairs(ents.FindByClass(v.class)) do
             if not IsValid(v2:GetOwner()) and not table.HasValue(entList, v2) then
                 if v.freeze then
                     v2:GetPhysicsObject():EnableMotion(false)
@@ -232,7 +232,7 @@ hook.Add("MapSetup", "Infection_WeaponRespawnSetup", function()
 
     GAMEMODE.RespawningWeaponCache = {}
 
-    for k, v in next, entList do
+    for k, v in ipairs(entList) do
         table.insert(GAMEMODE.RespawningWeaponCache, {
             class = v:GetClass(),
             pos = v:GetPos(),
@@ -246,7 +246,7 @@ end)
 hook.Add("Clock", "Infection_WeaponRespawn", function()
     if not GAMEMODE.RespawningWeaponCache then return end
 
-    for k, v in next, GAMEMODE.RespawningWeaponCache do
+    for k, v in ipairs(GAMEMODE.RespawningWeaponCache) do
         local last = ents.GetByIndex(v.lastIndex)
 
         if not IsValid(last) or IsValid(last:GetOwner()) then
@@ -318,7 +318,7 @@ hook.Add("DoPlayerDeath", "Infection_DropWeapons", function(ply)
         GAMEMODE:DeathDropWeapon(ply, v, GAMEMODE.DropWeapons[v:GetClass()])
     end
 
-    for k, v in next, ply:GetWeapons() do
+    for k, v in ipairs(ply:GetWeapons()) do
         if GAMEMODE.DropWeapons[v:GetClass()] == DROPWEAPON_ALWAYS then
             GAMEMODE:DeathDropWeapon(ply, v, DROPWEAPON_ALWAYS)
         end
@@ -401,7 +401,7 @@ function GM:Clock()
 end
 
 hook.Add("Clock", "Infection_PlayerHealth", function()
-    for k, v in next, player.GetAll() do
+    for k, v in player.Iterator() do
         local config = GAMEMODE:SelectPlayerConfig(v)
 
         if RoundTimer % config.HealthRechargeDelay == 0 then
@@ -413,12 +413,12 @@ end)
 hook.Add("Clock", "Infection_RoundEnd", function()
     if CurTime() < 15 then return end
     if RoundTimer <= 1 then return end
-    if #player.GetAll() < 2 then return end
+    if player.GetCount() < 2 then return end
     local noHuman = GAMEMODE.EndIfNoHumans
     local noZombie = GAMEMODE.EndIfNoZombies
     local noAZ = GAMEMODE.EndIfNoAZs
 
-    for k, v in next, player.GetAll() do
+    for k, v in player.Iterator() do
         if v:Team() == TEAM_HUMAN then
             noHuman = false
         elseif v:Team() == TEAM_ZOMBIE then
@@ -436,11 +436,11 @@ hook.Add("Clock", "Infection_RoundEnd", function()
 end)
 
 hook.Add("Clock", "Infection_PlayerAmmo", function()
-    for k, v in next, player.GetAll() do
+    for k, v in player.Iterator() do
         local config = GAMEMODE:SelectPlayerConfig(v)
 
         if config.ReceiveAmmo then
-            for _, a in next, GAMEMODE.AmmoRegen do
+            for _, a in ipairs(GAMEMODE.AmmoRegen) do
                 if RoundTimer % a.delay == 0 then
                     if a.requireWeapon == nil or v:HasWeapon(a.requireWeapon) then
                         v:SetAmmo(math.min(v:GetAmmoCount(a.type) + a.amount, 999), a.type)
@@ -455,7 +455,7 @@ function GM:RoundEnd()
     local HumansWin = self.AZWinsTimeout
     local TargetTeam = self.AZWinsTimeout and TEAM_AZ or TEAM_HUMAN
 
-    for k, v in next, player.GetAll() do
+    for k, v in player.Iterator() do
         if v:Alive() then
             if v:Team() == TargetTeam then
                 HumansWin = not self.AZWinsTimeout
@@ -515,7 +515,7 @@ function GM:ChooseNextZombies()
     end
 
     --Set teams now to show in scoreboard
-    for k, v in next, player.GetAll() do
+    for k, v in player.Iterator() do
         if table.HasValue(zombies, v) then
             if self.UseAZ then
                 self:PlayerJoinTeam(v, TEAM_AZ)
@@ -533,7 +533,7 @@ end
 function GM:RoundStart()
     local AZleft = #self.AZs > 0
 
-    for k, v in next, player.GetAll() do
+    for k, v in player.Iterator() do
         if table.HasValue(self.AZs, v) then
             AZleft = false
         end
@@ -546,7 +546,7 @@ function GM:RoundStart()
         return
     end
 
-    for k, v in next, player.GetAll() do
+    for k, v in player.Iterator() do
         --Set teams again to be sure
         if v:Alive() then
             v:Kill()
@@ -595,7 +595,7 @@ function GM:EntityTakeDamage(target, dmg)
             -- TODO: Do this smarter
             local lms = true
 
-            for _, ply in ipairs(player.GetAll()) do
+            for _, ply in player.Iterator() do
                 if ply:Team() == TEAM_HUMAN and ply ~= target then
                     lms = false
                     break

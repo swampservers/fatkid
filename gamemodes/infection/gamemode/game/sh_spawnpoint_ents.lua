@@ -21,7 +21,7 @@ if CLIENT then
 end
 
 for _, group in pairs({GM.Human, GM.Zombie, GM.AZ}) do
-    for _, cls in pairs(group.SpawnpointClasses) do
+    for _, cls in ipairs(group.SpawnpointClasses) do
         scripted_ents.Register(table.Copy(ENT), cls) -- The Register function creates and modifies ClassName on the table, so we've gotta make each unique
     end
 end

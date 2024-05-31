@@ -59,13 +59,13 @@ end
 function ents.FindByClasses(types)
     local mapping = {}
 
-    for _, cls in pairs(types) do
+    for _, cls in ipairs(types) do
         mapping[cls] = true
     end
 
     local out = {}
 
-    for k, v in next, ents.GetAll() do
+    for k, v in ents.Iterator() do
         if mapping[v:GetClass()] then
             table.insert(out, v)
         end

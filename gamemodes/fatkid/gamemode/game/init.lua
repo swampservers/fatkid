@@ -169,7 +169,7 @@ GM.Zombie.EndSpeed = 500
 hook.Add("Clock", "Fatkid_Balancing", function()
     local humans = 0
 
-    for k, v in next, player.GetAll() do
+    for k, v in player.Iterator() do
         if v:Team() == TEAM_HUMAN then
             humans = humans + 1
         end
@@ -181,7 +181,7 @@ hook.Add("Clock", "Fatkid_Balancing", function()
     GAMEMODE.AZ.Speed = Lerp(progress, GAMEMODE.AZ.StartSpeed, GAMEMODE.AZ.EndSpeed)
     GAMEMODE.Zombie.Speed = Lerp(progress, GAMEMODE.Zombie.StartSpeed, GAMEMODE.Zombie.EndSpeed)
 
-    for k, v in next, player.GetAll() do
+    for k, v in player.Iterator() do
         if v:Team() == TEAM_AZ then
             v:SetRunSpeed(GAMEMODE.AZ.Speed)
             v:SetWalkSpeed(GAMEMODE.AZ.Speed)
@@ -256,7 +256,7 @@ GM.BarricadeDamageTypeMod = {
 hook.Add("MapSetup", "Fatkid_Barricades", function()
     GAMEMODE.Barricades = {}
 
-    for k, v in next, ents.GetAll() do
+    for k, v in ents.Iterator() do
         local name = v:GetName()
 
         if name:sub(1, 9) == "barricade" then
@@ -303,7 +303,7 @@ hook.Add("EntityTakeDamage", "Fatkid_BarricadeDamage", function(target, dmg)
             GAMEMODE.Barricades[name].health = GAMEMODE.Barricades[name].health - dmg:GetDamage() * GAMEMODE.BarricadeDamageMod
 
             if GAMEMODE.Barricades[name].health <= 0 then
-                for k, v in next, GAMEMODE.Barricades[name].props do
+                for k, v in ipairs(GAMEMODE.Barricades[name].props) do
                     if IsValid(v) then
                         v:TakeDamage(500, Entity(0), Entity(0))
 

@@ -69,7 +69,7 @@ function SWEP:PrimaryAttack()
         local closestDist = 1000
         local ply = nil
 
-        for k, v in next, ents.FindInSphere(center, 50) do
+        for k, v in ipairs(ents.FindInSphere(center, 50)) do
             if v:IsPlayer() and v ~= self.Owner and v:Alive() and GAMEMODE:PlayerShouldTakeDamage(v, self.Owner) then
                 local dist = v:GetPos():Distance(self.Owner:GetPos())
 
@@ -160,7 +160,7 @@ function SWEP:PrimaryAttack()
             end)
         else
             --this bit lets us eat breakable props like boxes
-            for k, v in next, ents.FindInSphere(center, 50) do
+            for k, v in ipairs(ents.FindInSphere(center, 50)) do
                 if v:GetClass():find("prop") then
                     local dist = v:GetPos():Distance(self.Owner:GetPos())
 
@@ -222,7 +222,7 @@ function SWEP:SecondaryAttack()
                 --do raycast to prevent going thru celing
                 local ForceCenter = self.Owner:GetPos() - Vector(0, 0, 100)
 
-                for k, v in next, ents.FindInSphere(SlamCenter, 100) do
+                for k, v in ipairs(ents.FindInSphere(SlamCenter, 100)) do
                     if v:IsPlayer() and v ~= self.Owner then
                         if v:Team() == TEAM_HUMAN then
                             v:SetPos(v:GetPos() + Vector(0, 0, 1))
@@ -340,7 +340,7 @@ else
 
         --physics effect on local objects - use slight delay in case new gibs were created by server from this slam
         timer.Simple(0.05, function()
-            for k, v in next, ents.FindInSphere(SlamCenter, 100) do
+            for k, v in ipairs(ents.FindInSphere(SlamCenter, 100)) do
                 if v:EntIndex() == -1 or v:GetClass() == "class C_HL2MPRagdoll" then
                     FatKidSlamForce(v, SlamCenter, ForceCenter, PlayerPos)
                 end

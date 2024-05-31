@@ -195,10 +195,9 @@ local SCORE_BOARD = {
     --draw.RoundedBox( 4, 0, 0, w, h, Color( 0, 0, 0, 200 ) )
     Think = function(self, w, h)
         self.Name:SetText(GetHostName())
-        self.NumPlayers:SetText(tostring(#player.GetAll()) .. " players online")
-        local plyrs = player.GetAll()
+        self.NumPlayers:SetText(tostring(player.GetCount()) .. " players online")
 
-        for id, pl in pairs(plyrs) do
+        for id, pl in player.Iterator() do
             if IsValid(pl.ScoreEntry) then continue end
             pl.ScoreEntry = vgui.CreateFromTable(PLAYER_LINE, pl.ScoreEntry)
             pl.ScoreEntry:Setup(pl)

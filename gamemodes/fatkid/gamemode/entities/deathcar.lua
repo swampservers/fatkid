@@ -50,7 +50,7 @@ function ENT:Think()
         self.TARGET = nil
 
         if self.SEEKPLAYERY then
-            for k, v in pairs(player.GetAll()) do
+            for k, v in player.Iterator() do
                 if v:Alive() and v:GetPos().y > self.SEEKPLAYERY then
                     self.TARGET = v
                 end

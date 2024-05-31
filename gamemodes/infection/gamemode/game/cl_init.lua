@@ -79,7 +79,7 @@ hook.Add("HUDPaint", "RespawnTime", function()
 end)
 
 hook.Add("HUDPaint", "OnePlayerOnline", function()
-    if #player.GetAll() > 1 then return end
+    if player.GetCount() > 1 then return end
     local msg = "Waiting for another player to join..."
     surface.SetFont(GAMEMODE.UI.LargeText)
     local w, h = surface.GetTextSize(msg)

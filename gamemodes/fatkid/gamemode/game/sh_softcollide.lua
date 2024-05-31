@@ -5,12 +5,13 @@ SCpushsize = 20
 SCstandheight = 72
 SCcrouchheight = 36
 
+-- TODO(winter): Optimize this more; we should NOT be iterating through players twice unless absolutely necessary (is it?)
 hook.Add("Move", "SoftCollide", function(ply, data)
     if ply:Team() == TEAM_HUMAN then
         local plypos = ply:GetPos()
         local velchange = Vector(0, 0, 0)
 
-        for k, v in pairs(ents.FindByClass("player")) do
+        for k, v in player.Iterator() do
             if IsValid(v) and v:Alive() and v:Team() == TEAM_HUMAN and v ~= ply then
                 local check = true
                 local otherpos = v:GetPos()
@@ -63,7 +64,7 @@ hook.Add("Move", "SoftCollide", function(ply, data)
         local plypos = ply:GetPos()
         local velchange = Vector(0, 0, 0)
 
-        for k, v in pairs(ents.FindByClass("player")) do
+        for k, v in player.Iterator() do
             if IsValid(v) and v:Alive() and v:Team() == TEAM_AZ and v ~= ply then
                 local check = true
                 local otherpos = v:GetPos()

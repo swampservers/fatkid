@@ -75,7 +75,7 @@ GM.MapWeapons = {
 }
 
 hook.Add("RoundStart", "DuckHunt_Balancing", function()
-    local pc = #player.GetAll()
+    local pc = player.GetCount()
     local hits = 1
 
     if pc < 10 then
@@ -108,7 +108,7 @@ hook.Add("OnEntityCreated", "FasterBolts", function(ent)
 end)
 
 hook.Add("Tick", "DuckHunt_OutOfWater", function()
-    for k, v in pairs(player.GetAll()) do
+    for k, v in player.Iterator() do
         if v:Team() == TEAM_ZOMBIE and v:Alive() then
             if v:WaterLevel() == 0 then
                 if v.GotInWater then
@@ -157,7 +157,7 @@ local BaseChooseNextZombies = GM.ChooseNextZombies
 function GM:ChooseNextZombies()
     self.AZCount = 1
 
-    if #player.GetAll() >= 18 then
+    if player.GetCount() >= 18 then
         self.AZCount = 2
     end
 

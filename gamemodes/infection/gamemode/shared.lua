@@ -18,7 +18,7 @@ if GM.variant ~= "base" then
     --In case multiple folders match, sort so that the most specific names load last
     table.sort(maps, function(a, b) return string.len(a) < string.len(b) end)
 
-    for k, v in next, maps do
+    for k, v in ipairs(maps) do
         if string.find(game.GetMap():lower(), v) then
             LoadFolder(GM.variant .. "/gamemode/maps/" .. v)
         end

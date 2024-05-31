@@ -4,7 +4,7 @@
 function LoadFolder(folder)
     local files, folders = file.Find(folder .. "/*", "LUA")
 
-    for k, v in next, files do
+    for k, v in ipairs(files) do
         local prefix = string.sub(v, 0, 2)
         v = folder .. "/" .. v
 
@@ -22,7 +22,7 @@ function LoadFolder(folder)
         end
     end
 
-    for k, v in next, folders do
+    for k, v in ipairs(folders) do
         if v == "entities" then
             LoadEntityFolder(folder .. "/" .. v)
         else
@@ -36,7 +36,7 @@ function LoadEntityFolder(folder)
     local files, folders = file.Find(folder .. "/*", "LUA")
 
     -- Load single file entities
-    for k, v in next, files do
+    for k, v in ipairs(files) do
         entName = string.Explode(".", v, false)[1] --remove file extension
         v = folder .. "/" .. v
 
@@ -68,7 +68,7 @@ function LoadEntityFolder(folder)
     end
 
     -- Load folder entities
-    for k, v in next, folders do
+    for k, v in ipairs(folders) do
         entName = v
         local subfiles, _ = file.Find(folder .. "/" .. v .. "/*", "LUA")
         _G.ENT = {}
@@ -80,7 +80,7 @@ function LoadEntityFolder(folder)
             Secondary = {}
         }
 
-        for k2, v2 in next, subfiles do
+        for k2, v2 in ipairs(subfiles) do
             local prefix = string.sub(v2, 0, 2)
             v2 = folder .. "/" .. v .. "/" .. v2
 
