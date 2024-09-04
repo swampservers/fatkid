@@ -286,8 +286,8 @@ function SWEP:SecondaryAttack()
     end
 end
 
-function SWEP:Deploy()
-    self.Owner:DrawViewModel(false)
+function SWEP:ShouldDrawViewModel()
+    return false
 end
 
 function SWEP:DrawWorldModel()
